@@ -28,13 +28,13 @@ const Navbar = ({isAuthenticated,bgcolor,firstletter,name}) => {
                     <div className="auth flex gap-2 items-center">
                     <NavLink
                       to="/login"
-                      className="flex items-center justify-center w-20 h-12 bg-gray-100 rounded-lg hover:bg-green-600 hover:text-white text-md transition duration-300"
+                      className="flex items-center justify-center w-20 h-12 text-black bg-gray-100 rounded-lg hover:bg-green-600 hover:text-white text-md transition duration-300"
                     >
                       Log in
                     </NavLink>
                     <NavLink
                       to="/signup"
-                      className="flex items-center justify-center w-20 h-12 bg-gray-100 rounded-lg hover:bg-green-600 hover:text-white text-md transition duration-300"
+                      className="flex items-center justify-center w-20 h-12 text-black bg-gray-100 rounded-lg hover:bg-green-600 hover:text-white text-md transition duration-300"
                     >
                       Sign up
                     </NavLink>
