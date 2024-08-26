@@ -11,7 +11,7 @@ const App = () => {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/auth/islogin',{ withCredentials: true });
+      const response = await axios.get('https://mapday-backend.onrender.com/api/auth/islogin',{ withCredentials: true });
         // console.log(response.data)
 
       if (response.data.isAuthenticated) {
