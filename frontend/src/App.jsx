@@ -42,7 +42,7 @@ const App = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:3000/api/auth/logout', {}, { withCredentials: true });
+      await axios.post('https://mapday-backend.onrender.com/api/auth/logout', {}, { withCredentials: true });
       setIsAuthenticated(false);
       setFirstletter(null);
       setBgcolor(null);
