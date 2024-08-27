@@ -29,7 +29,7 @@ const Dashboard = () => {
     e.preventDefault();
     const data = { title, url: videoURL };
     try {
-      const response = await axios.post("https://mapday-backend.onrender.com/api/video/create", data, { withCredentials: true });
+      const response = await axios.post("https://mapday.onrender.com/api/video/create", data, { withCredentials: true });
       setTitle("");
       setVideoURL("");
       setThumbnailURL("");
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const getAllVideos = async () => {
     try {
-      const response = await axios.get("https://mapday-backend.onrender.com/api/video/allvideos", { withCredentials: true });
+      const response = await axios.get("https://mapday.onrender.com/api/video/allvideos", { withCredentials: true });
       setList(response.data);
     } catch (error) {
       console.error("Error fetching videos:", error);
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   const handleIscomplete = async (videoID) => {
     try {
-      await axios.put(`https://mapday-backend.onrender.com/api/video/update/${videoID}`, {}, { withCredentials: true });
+      await axios.put(`https://mapday.onrender.com/api/video/update/${videoID}`, {}, { withCredentials: true });
       await getAllVideos(); 
     } catch (error) {
       console.error("Error updating video:", error);
@@ -65,7 +65,7 @@ const Dashboard = () => {
   const handledelete = async (e, videoID) => {
     e.stopPropagation(); // Prevent the click event from propagating to parent elements
     try {
-      await axios.delete(`https://mapday-backend.onrender.com/api/video/delete/${videoID}`, { withCredentials: true });
+      await axios.delete(`https://mapday.onrender.com/api/video/delete/${videoID}`, { withCredentials: true });
       await getAllVideos(); 
     } catch (error) {
       console.error("Error deleting video:", error);

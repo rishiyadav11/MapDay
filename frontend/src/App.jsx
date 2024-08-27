@@ -11,7 +11,7 @@ const App = () => {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get('https://mapday-backend.onrender.com/api/auth/islogin',{ withCredentials: true });
+      const response = await axios.get('https://mapday.onrender.com/api/auth/islogin',{ withCredentials: true });
         // console.log(response.data)
 
       if (response.data.isAuthenticated) {
@@ -42,7 +42,7 @@ const App = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://mapday-backend.onrender.com/api/auth/logout', {}, { withCredentials: true });
+      await axios.post('https://mapday.onrender.com/api/auth/logout', {}, { withCredentials: true });
       setIsAuthenticated(false);
       setFirstletter(null);
       setBgcolor(null);

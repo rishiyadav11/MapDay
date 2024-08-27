@@ -17,7 +17,7 @@ const Login = ({onLogin}) => {
   const onSubmit = async(data) => {
     // console.log(data);
     try {
-      const response = await axios.post('https://mapday-backend.onrender.com/api/auth/login', data,{  withCredentials: true,});
+      const response = await axios.post('https://mapday.onrender.com/api/auth/login', data,{  withCredentials: true,});
       // const { msg, already } = response.data;
       // console.log(msg, already)
        onLogin()
